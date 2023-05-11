@@ -1,14 +1,23 @@
-FROM python:3.8.3-alpine
+FROM python:3.9-slim-buster
 
-RUN apk update && apk upgrade
-RUN apk add python3-dev
-RUN apk add lapack-dev blas-dev
-RUN python -m pip install --upgrade pip
-
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        build-essential \
+        libjpeg-dev \
+        libpng-dev \
+        libfreetype6-dev \
+        libblas-dev \
+        liblapack-dev \
+        gfortran \
+        git && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY . /app 
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 CMD ["streamlit","run","ui_threading.py"]
