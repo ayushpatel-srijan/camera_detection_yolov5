@@ -1,7 +1,7 @@
-
 FROM python:3.8.3-alpine
-RUN apt-get update -y
-RUN apt-get install python3-pip -y
+
+RUN apk update && apk upgrade
+RUN apk add python3-dev
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
