@@ -12,6 +12,8 @@ RUN apt-get update && \
         git && \
     rm -rf /var/lib/apt/lists/*
 
+RUN python -m pip install --upgrade pip
+
 WORKDIR /app
 
 COPY requirements.txt .
