@@ -25,10 +25,6 @@ scipy
 seaborn
 setuptools
 streamlit
-tensorflow
-tensorflowjs
-tflite_runtime
-tflite_support
 thop
 torch
 torchvision
