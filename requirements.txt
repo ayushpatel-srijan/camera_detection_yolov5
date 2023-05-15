@@ -13,7 +13,6 @@ onnxruntime
 onnxsim
 opencv_contrib_python
 openvino
-paddle
 pafy
 pandas
 Pillow
@@ -28,7 +27,6 @@ setuptools
 streamlit
 tensorflow
 tensorflowjs
-tensorrt
 tflite_runtime
 tflite_support
 thop
