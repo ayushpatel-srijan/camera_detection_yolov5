@@ -22,4 +22,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["streamlit","run","ui_threading.py"]
+CMD ["streamlit","run","app_ui_yolov5_with_video.py"]
