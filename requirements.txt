@@ -1,4 +1,5 @@
 albumentations
+ultralytics
 comet_ml
 coremltools
 Flask
