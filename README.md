@@ -1,4 +1,4 @@
-Steps to Connect with PEM Key and Run Docker Compose
+## Deployment: Setting up and Deploying the Camera Detection PoC 
 
 1. Connect using PEM Key:
    - Open your terminal or command prompt.
