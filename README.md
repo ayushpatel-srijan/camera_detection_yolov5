@@ -1,40 +1,23 @@
-Steps to Connect with PEM Key and Run MMM_PoC
+Steps to Connect with PEM Key and Run Docker Compose
 
-1. Connect to the Server Using PEM Key
-   - Open a terminal or command prompt.
-   - Use the following command to connect to the server:
+1. Connect using PEM Key:
+   - Open your terminal or command prompt.
+   - Use the following command to connect to the server with the PEM key:
      ```
-     ssh -i /path/to/pem/key.pem username@server_ip_address
+     ssh -i camera_detection_keypair.pem user@your_server_ip
      ```
-     Replace `/path/to/pem/key.pem` with the actual path to your PEM key file, and `username@server_ip_address` with the appropriate username and IP address of the server you want to connect to.
+     Replace `camera_detection_keypair.pem` with the path to your PEM key file, and `user@your_server_ip` with the appropriate user and server IP.
 
-2. Navigate to the MMM_PoC Folder
-   - Use the following command to change to the MMM_PoC folder:
+2. Navigate to the "camera_detection_yolov5" Folder:
+   - Once connected to the server, use the `cd` command to navigate to the "camera_detection_yolov5" folder.
      ```
-     cd MMM_PoC
+     cd camera_detection_yolov5
      ```
 
-3. Run Docker Compose
-   - Once you are inside the MMM_PoC folder, use the following command to start the Docker Compose process:
+3. Run Docker Compose:
+   - After navigating to the "camera_detection_yolov5" folder, use the following command to run Docker Compose:
      ```
      sudo docker-compose up
      ```
-     This command will download any necessary dependencies and start the MMM_PoC application.
+   - This command will start the Docker Compose process and provide the specific link
 
-4. Monitor the Application
-   - After running the above command, monitor the terminal or command prompt for any logs or output related to the MMM_PoC application.
-
-5. Access the MMM_PoC Application
-   - Once the Docker Compose process is running without any issues, you can access the MMM_PoC application by opening a web browser and entering the appropriate URL or IP address.
-
-6. Interact with the MMM_PoC Application
-   - Use the features and functionalities provided by the MMM_PoC application as needed.
-
-7. Stop the MMM_PoC Application
-   - To stop the MMM_PoC application and terminate the Docker Compose process, press `Ctrl + C` in the terminal or command prompt where it is running.
-
-8. Disconnect from the Server
-   - Once you are finished with the MMM_PoC application, use the following command to disconnect from the server:
-     ```
-     exit
-     ```
